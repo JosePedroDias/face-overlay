@@ -21,11 +21,9 @@ iframe {
   pointer-events: none;
 }
 
-.i50 {
-  transform: scale(0.35, 0.35);
-}
-.i30 {
-  transform: scale(0.25, 0.25);
+button {
+  margin-top: 10px;
+  padding: 10px;
 }
 
 img {
@@ -34,11 +32,14 @@ img {
   position: absolute;
   left: 0;
   top: 0;
+  transition: left 250ms, top 250ms, transform 250ms, opacity 250ms;
   margin-left: -83px;
   margin-top: -106px;
 }
 
-button {
-  margin-top: 10px;
-  padding: 10px;
+.i50 {
+  transform: scale(0.35, 0.35);
+}
+.i30 {
+  transform: scale(0.25, 0.25);
 }
