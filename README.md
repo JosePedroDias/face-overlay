@@ -5,7 +5,7 @@ Current version [in github.io](https://josepedrodias.github.io/face-overlay/).
 
 ## how to adapt
 
-1. Choose a video from github. Write down it's id, width and height (`YTID`, `W`, `H`). Also choose the start and end times for your loop animation (`TS`, `TE`).
+1. Choose a video from YouTube. Write down it's id, width and height (`YTID`, `W`, `H`). Also choose the start and end times for your loop animation (`TS`, `TE`).
 2. Look for pictures of the replacement face. images.google.com are very effective. Keep in mind the pose you're looking for.
 3. Edit the replacement face in Photoshop/GIMP/etc - delete the surroundings. Save as PNG and write down width and height (scale down if too large first). `face.png`, `fw`, `fh`.
 4. Edit `main.css`:

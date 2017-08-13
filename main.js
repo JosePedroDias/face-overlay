@@ -6,6 +6,7 @@ var H = 480 / 2;
 var TS = 30;
 var TE = 50;
 
+var b = document.querySelector("button");
 var p;
 function onYouTubeIframeAPIReady() {
   p = new YT.Player("yt_target", {
@@ -19,13 +20,18 @@ function onYouTubeIframeAPIReady() {
       fs: 0
     },
     events: {
-      onReady: onPlayerReady
+      //onReady: onPlayerReady
     }
   });
 }
 
-function onPlayerReady(ev) {
-  p.playVideo();
+b.addEventListener("click", function() {
+  document.body.removeChild(b);
+  onPlayerReady();
+});
+
+function onPlayerReady() {
+  //p.playVideo();
   //console.log( p.getAvailablePlaybackRates() );
   //p.setPlaybackRate(0.25);
   p.seekTo(TS);
@@ -71,11 +77,6 @@ function stop(ev) {
   ev.preventDefault();
   ev.stopPropagation();
 }
-
-var b = document.querySelector("button");
-b.addEventListener("click", function() {
-  p.playVideo();
-});
 
 over.addEventListener("mousedown", function() {
   down = true;

@@ -22,8 +22,12 @@ iframe {
 }
 
 button {
-  margin-top: 10px;
-  padding: 10px;
+  position: absolute;
+  left: 0;
+  top: 0px;
+  width: 100%;
+  padding: 20px;
+  z-index: 1;
 }
 
 img {
