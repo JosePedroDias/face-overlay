@@ -31,9 +31,9 @@ b.addEventListener("click", function() {
 });
 
 function onPlayerReady() {
-  //p.playVideo();
   //console.log( p.getAvailablePlaybackRates() );
   //p.setPlaybackRate(0.25);
+  p.playVideo();
   p.seekTo(TS);
   var i = document.querySelector("img");
   setInterval(function() {
