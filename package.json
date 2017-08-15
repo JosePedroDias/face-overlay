@@ -1,0 +1,18 @@
+{
+  "name": "face-overlay",
+  "version": "1.0.0",
+  "description": "First version is on JSBin, the [bas dost song from Rihanna](https://output.jsbin.com/tosotuy/latest/quiet).  \r Current version [in github.io](https://josepedrodias.github.io/face-overlay/).",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@personal.github.com:JosePedroDias/face-overlay.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "nightmare": "^2.10.0"
+  }
+}
