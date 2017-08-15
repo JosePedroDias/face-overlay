@@ -31,37 +31,25 @@ b.addEventListener("click", function() {
 });
 
 function onPlayerReady() {
-  //console.log( p.getAvailablePlaybackRates() );
-  //p.setPlaybackRate(0.25);
   p.playVideo();
   p.seekTo(TS);
   var i = document.querySelector("img");
   setInterval(function() {
-    var t0 = p.getCurrentTime();
+    var t0 = p.getCurrentTime() + 0.25; // a keyframe ahead of time
     t = (~~(t0 * 4) / 4).toFixed(2);
     if (t0 > TE) {
       p.seekTo(30);
     }
-    var pos;
-    if (down) {
-      pos = [x, y];
-      o[t] = pos;
-    } else {
-      pos = o[t];
-    }
-
     var pos = o[t];
     if (pos) {
       i.style.left = pos[0] + "px";
       i.style.top = pos[1] + "px";
       if (pos[2]) {
-        i.className = "i" + pos[2];
+        i.style.transform = "scale(" + pos[2] + ", " + pos[2] + ")";
       }
       i.style.opacity = 1;
-      //console.log(t);
     } else {
       i.style.opacity = 0;
-      //console.log('---');
     }
   }, 220);
 }
@@ -77,20 +65,3 @@ function stop(ev) {
   ev.preventDefault();
   ev.stopPropagation();
 }
-
-over.addEventListener("mousedown", function() {
-  down = true;
-});
-
-over.addEventListener("mouseup", function(ev) {
-  down = false;
-  stop(ev);
-});
-
-over.addEventListener("mousemove", function(ev) {
-  stop(ev);
-  if (down) {
-    x = ev.clientX;
-    y = ev.clientY;
-  }
-});
